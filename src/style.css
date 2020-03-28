@@ -1,28 +1,41 @@
-/* TODO: #image Background image */
+/* TODO: Background image */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background-color: white;
+    background-color: black;
     margin: 0;
 }
 
 header {
-    height: 125px;
-    background-color: white;
-    margin: 0px 8px 15px 8px;
-    font-size: 2em;
+    height: 1000px;
 }
 
-header #links {
-    float: right;
-    width: 700px;
-    margin-top: 50px;
+nav {
+    text-align: center;
+    font-size: 1.7em;
+    padding: 15px;
 }
 
-header .link {
-    margin-left: 80px;
-    background-color: white;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+nav ul {
+    display: inline-block;
+    padding: 0;
+}
+
+nav .link {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-shadow: 1px 2px gray;
+    margin-left: 30px;
+    position: relative;
+    top: -17px;
+    display: inline;
+    list-style-type: none;
+}
+
+nav img {
+    margin-right: 20px;
 }
 
 a {
@@ -33,9 +46,86 @@ a:link, a:visited {
     color: black;
 }
 
-#headerImage {
+header #intro {
+    height: 500px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    background-color: rgba(0, 0, 0, 0.897);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+header h1 {
+    padding-top: 1em;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+
+header h2 {
+    padding-bottom: 0.5em;
+}
+
+header h2, header p {
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+header #intro h2 {
+    border-bottom: 5px solid black;
+    text-align: center;
+}
+
+header #intro p {
+    font-size: 0.8em;
+}
+
+header button {
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    font-size: 0.6em;
+}
+main {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    font-size: 1.3em;
+    background-color: rgba(0, 0, 0, 0.897);
+    color: white;
+}
+
+main div {
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+main p {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#contact h2 {
+    margin-top: 0;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 15px;
+    right: 70px;
+    font-family: fantasy;
+}
+
+#backToTop img {
+    margin-left: 10px;
+}
+
+footer {
+    height: 200px;
     width: 100%;
-    height: 800px;
-    border-top: 7px solid black;
-    border-bottom: 7px solid black;
 }
