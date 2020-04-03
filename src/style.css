@@ -26,6 +26,7 @@ nav ul {
 
 nav .link {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
     text-shadow: 1px 2px gray;
     margin-left: 30px;
     position: relative;
@@ -86,14 +87,12 @@ header #intro p {
 
 header button {
     margin-top: 25px;
-    padding: 15px;
+    padding: 15px 35px 15px 35px;
     border: none;
     font-size: 0.6em;
+    cursor: pointer;
 }
 main {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 30px;
     font-size: 1.3em;
     background-color: rgba(0, 0, 0, 0.897);
@@ -110,8 +109,130 @@ main p {
     padding-right: 2em;
 }
 
-#contact h2 {
-    margin-top: 0;
+#about, #services, #locations {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 65px auto 55px auto;
+}
+
+#locations {
+    margin-top: 20px;
+}
+
+#services {
+    text-align: center;
+    color: white;
+    height: 600px;
+}
+
+#services form {
+    height: 300px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#locationDiv, #typeDiv {
+    margin-bottom: 30px;
+}
+
+#services label {
+    margin-left: 55px;
+    padding-right: 90px;
+}
+
+#services input{
+    font-size: 1em;
+    border: 2px solid gray;
+    background-color: rgb(190, 190, 190);
+}
+
+#services select {
+    height: 41px;
+    padding: 0 20px 0 20px;
+    width: 420px;
+    font-size: 0.8em;
+    border: 2px solid grey;
+    background-color: rgb(190, 190, 190);
+}
+
+#services #locationDiv label {
+    padding-right: 65px;
+}
+
+#services #typeDiv label {
+    padding-right: 93px;
+}
+
+#submitDiv {
+    text-align: center;
+}
+
+#contact {
+    height: 800px;
+}
+
+#contact-inner {
+    width: 75%;
+    height: 650px;
+    background-color: rgba(20, 20, 20, 0.801);
+    margin: 75px auto 75px auto;
+}
+
+#contact-text{
+    float: left;
+    width: 650px;
+    margin: 15px;
+}
+
+#contact-form {
+    float: right;
+    height: 450px;
+    width: 450px;
+    margin: 75px 100px 0 0;
+    background-color: rgba(0, 0, 0, 0.767);
+    text-align: center;
+}
+
+form input {
+    height: 35px;
+    width: 375px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form textarea {
+    height: 95px;
+    width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
+    resize: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 0.6em;
+}
+
+form button {
+    margin-top: 25px;
+    padding: 15px 65px 15px 65px;
+    border: none;
+    font-size: 0.6em;
+    background-color: rgb(47, 47, 47);
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+form ::placeholder {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
 }
 
 #backToTop {
@@ -119,13 +240,54 @@ main p {
     bottom: 15px;
     right: 70px;
     font-family: fantasy;
+    cursor: pointer;
 }
 
 #backToTop img {
     margin-left: 10px;
 }
 
+.location {
+    font-size: 0.8em;
+    width: 420px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.pin, .tel {
+    margin-right: 5px;
+}
+
+.pin {
+    position: relative;
+    top: 5px;
+    margin-right: 15px;
+}
+
+.tel {
+    position: relative;
+    left: 4px;
+    top: 3px;
+    margin-right: 23px;
+}
+
+.address {
+    margin-bottom: 10px;
+}
+
 footer {
     height: 200px;
     width: 100%;
+}
+
+#services #year, #services #month, #services #day {
+    text-align: center;
+    width: 60px;
+    margin-left: 5px;
+    font-size: 1.4em;
+    padding-right: 0;
+}
+
+#services #year {
+    width: 100px;
 }

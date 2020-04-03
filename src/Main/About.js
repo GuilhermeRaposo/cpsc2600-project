@@ -7,15 +7,15 @@ export default class About extends React.Component {
             <div id='about'>
                 <h2>About</h2>
                 <p>
-                    Founded in 1991, Canada Computers & Electronics is a retailer of personal computers, 
-                    IT and components, as well as consumer electronics. Over its 25-year history, 
-                    they continue to provide customers with the best products at the best value that the computer retail world can offer.
+                    Founded in 1997, Gigabyte PC Parts & Services is a retailer of personal computers, 
+                    IT and components, as well as services related to computers and other devices. Over its 20-year history, 
+                    we continue to provide customers with the best products at the best value that the computer retail world can offer.
                 </p>
 
                 <p>
                     With a strengthening customer base and ever-growing demand across students, 
-                    professionals, and families alike, Canada Computers & Electronics is now a 
-                    trailblazing force with more than 1,000 employees staffing nearly 30 store locations across Canada.
+                    professionals, and families alike, Gigabyte PC Parts & Services is now a 
+                    trailblazing force with more than 100 employees staffing in the 6 store locations across Canada.
 
                     The key to their success resides in a constant improvement of business practices, 
                     as well as a knowledgeable and passionate team of people who go beyond expectations 

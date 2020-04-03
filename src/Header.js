@@ -1,21 +1,24 @@
 import React from 'react';
 
 export default class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     
+    scrollTo(yOffset) {
+        window.scrollTo({
+            top: yOffset,
+            behavior: 'smooth'
+        })
+    }
+
     render() {
         return (
             <header>
                 <nav>
-                    <img onClick={this.props.scrollToTop} src="/images/logo.png" className='logo'></img>
+                    <img src="/images/logo.png" className='logo'></img>
                     <ul>
-                        <li className='link'>Services</li>
-                        <li className='link'>Products</li>
-                        <li className='link'>About</li>
-                        <li className='link'>Location</li>
-                        <li className='link'>Contact</li>
+                        <li onClick={() => this.scrollTo(1000)} className='link'>About</li>
+                        <li onClick={() => this.scrollTo(1500)} className='link'>Services</li>
+                        <li onClick={() => this.scrollTo(2200)} className='link'>Contact</li>
+                        <li onClick={() => this.scrollTo(2800)} className='link'>Locations</li>
                     </ul>
                 </nav>
 
@@ -23,9 +26,10 @@ export default class Header extends React.Component {
                     <h1>Gigabyte</h1>
                     <h2>PC Parts and Services</h2>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ab eveniet, aliquid harum ipsam dicta, corrupti vero saepe aut facere exercitationem velit a omnis! Dicta, quas suscipit! Blanditiis, accusantium quae?
+                        Personal computer retailer and service provider. Our products include everything IT related and we 
+                        provide repair and cleaning services for one of the cheapest prices in the market and in multiple locations across Canada!
                     </p>
-                    <button>SHOW ME MORE &nbsp; &#9658;</button>
+                    <button onClick={() => this.scrollTo(1000)}>SHOW ME MORE &nbsp; &#9658;</button>
                 </div>
             </header>
         );

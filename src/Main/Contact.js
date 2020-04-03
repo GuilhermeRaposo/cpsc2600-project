@@ -8,27 +8,33 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div id='contact'>
-                <h2>Contact</h2>
+                <div id="contact-inner">
+                    <div id="contact-text">
+                    <h3>TEXT HERE?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores vel natus magni beatae. Maxime, officia quibusdam quae dignissimos exercitationem beatae doloribus ut totam enim amet molestiae deleniti aliquid quisquam.
+                    </p>
+                    <h3>TEXT HERE?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores vel natus magni beatae. Maxime, officia quibusdam quae dignissimos exercitationem beatae doloribus ut totam enim amet molestiae deleniti aliquid quisquam.
+                    </p>
+                    <h3>TEXT HERE?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores vel natus magni beatae. Maxime, officia quibusdam quae dignissimos exercitationem beatae doloribus ut totam enim amet molestiae deleniti aliquid quisquam.
+                    </p>
+                    </div>
 
-                <form method="post" action="/location">
-                    <label>
-                        City
-                        <input type='text' name='city' id='city'></input>
-                    </label>
-                    <label>
-                        Province
-                        <input type='text' name='province' id='province'></input>
-                    </label>
-                    <label>
-                        Address
-                        <input type='text' name='address' id='address'></input>
-                    </label>
-                    <label>
-                        Tel
-                        <input type='text' name='tel' id='tel'></input>
-                    </label>
-                    <input type="submit"></input>
-                </form>
+                    <div id='contact-form'>
+                        <h2>CONTACT US NOW:</h2>
+
+                        <form method="post" action="/contact">
+                                <input type='text' name='name' id='name' placeholder='Name'></input>
+                                <input type='text' name='email' id='email' placeholder='Email'></input>
+                                <textarea name='msg' id='msg' placeholder='Message'></textarea>
+                                <button type="submit">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         );
     }

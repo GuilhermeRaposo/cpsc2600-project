@@ -3,42 +3,21 @@ const app = express();
 
 const connection = require('./db/connection.js');
 
-const Location = require('./models/location');
+const router = require('./routes/index.js')
 
 // Static middleware
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.sendFile('index.js')
-});
+// Routes
+app.use('/api', router); 
 
-app.post('/location', (req,res) => {
-    let location = new Location(req.body)
-
-    location.save()
-    .then(() => res.send(location))
-    .catch((error) => res.status(500).send(error));
-});
-
-app.get('/locations', (req,res) => {
-    Location.find()
-    .exec((error, results) => {
-        if (error) {
-            res.send(error);
-        }
-        else {
-            if (results.length == 0) {
-                res.send('No locations found')
-            }
-            else {
-                res.status(201).send(results)
-            }   
-        }
-    });
-});
+// error handler
+app.use((error,req,res,next)=>{
+    res.send(error);
+})
 
 connection.once('open', ()=>{
-    const server = app.listen(process.env.PORT || 8080, ()=>{
-    console.log("Connected and listening");
+    const server = app.listen(process.env.PORT || 8080, () => {
+        console.log("Connected and listening");
     });
 });
