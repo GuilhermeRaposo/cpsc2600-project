@@ -8,6 +8,8 @@ const router = require('./routes/index.js')
 // Static middleware
 app.use(express.static('public'));
 
+app.use(express.json());
+
 // Routes
 app.use('/api', router); 
 

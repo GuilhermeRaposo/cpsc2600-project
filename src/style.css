@@ -117,7 +117,7 @@ main p {
 }
 
 #locations {
-    margin-top: 20px;
+    margin: 30px auto 75px auto;
 }
 
 #services {
@@ -276,8 +276,14 @@ form ::placeholder {
 }
 
 footer {
-    height: 200px;
+    height: 30px;
     width: 100%;
+    border-top: 2px solid grey;
+    margin-top: 80px;
+    padding-top: 30px;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    text-align: center;
 }
 
 #services #year, #services #month, #services #day {

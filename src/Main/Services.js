@@ -1,4 +1,5 @@
 import React from 'react';
+import Axios from 'axios';
 
 export default class Services extends React.Component {
     constructor(props) {
@@ -8,7 +9,9 @@ export default class Services extends React.Component {
             minYear: 2020,
             minMonth: 1,
             minDays: 1,
-            maxDays: 31
+            maxDays: 31,
+
+            name: ''
         }
     }
 
@@ -44,17 +47,40 @@ export default class Services extends React.Component {
         }
     }
 
+    handleNameChange(e) {
+        this.setState({
+            name: e.target.value
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        const year = document.getElementById('year').value;
+        const month = document.getElementById('month').value;
+        const day = document.getElementById('day').value;
+
+        Axios.post('/api/appointments', {
+            name: this.state.name,
+            date: `${year}-${month}-${day}`,
+            location: document.getElementById('locationSelect').value,
+            type: document.getElementById('typeOfService').value
+          })
+          .then(results => {})
+          .catch(error=>console.log(error))
+    }
+
     render() {
         return (
             <div id="services">
                 <h2>SCHEDULE AN APPOINTMENT!</h2>
 
-                <form>
+                <form onSubmit={(e) => this.handleSubmit(e)}>
                     <div id="nameDiv">
                         <label htmlFor='name'>
                             Name:    
                         </label>
-                        <input type='text' name='name' id='name'></input>
+                        <input type='text' name='name' id='name' onChange={(e) => this.handleNameChange(e)}></input>
                     </div>
 
                     <div id="dateDiv">
@@ -75,7 +101,7 @@ export default class Services extends React.Component {
 
                     <div id="typeDiv">
                         <label htmlFor='type'>Type: </label>
-                        <select>
+                        <select id='typeOfService'>
                             <option value='repair'>Repair</option>
                             <option value='cleaning'>Cleaning</option>
                         </select>

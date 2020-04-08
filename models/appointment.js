@@ -11,6 +11,10 @@ let AppointmentSchema  = new Schema({
         type: Date,
         required: true
     },
+    location: {
+            type: Schema.Types.ObjectId, 
+            ref: 'Location'
+    },
     type: {
         type: String,
         required: true
