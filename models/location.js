@@ -5,7 +5,7 @@ let Schema = mongoose.Schema;
 let LocationSchema  = new Schema({
     city: {
         type: String, 
-        maxlength: 20
+        maxlength: 15
     },
     province: {
         type: String, 

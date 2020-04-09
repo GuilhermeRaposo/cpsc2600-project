@@ -18,10 +18,11 @@ exports.getContact = (req,res, next) => {
 
 exports.postContact = (req, res, next) => {
     const newContact = new Contact(req.body);
-
-    Contact.save()
+    console.log(newContact)
+    newContact.save()
     .then((results) => {
+        console.log(123)
         res.status(201).send(results)
     })
-    .catch((error) => error);
+    .catch((error) => console.log(error));
 }

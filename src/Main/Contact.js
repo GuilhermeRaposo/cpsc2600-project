@@ -1,8 +1,26 @@
 import React from 'react';
+import Axios from 'axios';
 
 export default class Footer extends React.Component {
     constructor(props){
         super(props);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        Axios.post('/api/contact', {
+            name: document.getElementById('nameContact').value,
+            email: document.getElementById('email').value,
+            msg: document.getElementById('msg').value
+        })
+        .then(results => {
+            this.props.submitSuccessful();
+        })
+        .catch(error=>{
+            this.props.submitFailed();
+            console.log(error);
+          });
     }
 
     render() {
@@ -27,8 +45,8 @@ export default class Footer extends React.Component {
                     <div id='contact-form'>
                         <h2>CONTACT US NOW:</h2>
 
-                        <form method="post" action="/contact">
-                                <input type='text' name='name' id='name' placeholder='Name'></input>
+                        <form onSubmit={(e) => this.handleSubmit(e)}>
+                                <input type='text' name='name' id='nameContact' placeholder='Name'></input>
                                 <input type='text' name='email' id='email' placeholder='Email'></input>
                                 <textarea name='msg' id='msg' placeholder='Message'></textarea>
                                 <button type="submit">SUBMIT</button>

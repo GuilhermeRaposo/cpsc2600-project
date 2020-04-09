@@ -29,8 +29,8 @@ export default class Main extends React.Component {
         return (
             <main>
                 <About />
-                <Services locations={this.state.locations} />
-                <Contact />
+                <Services locations={this.state.locations} submitSuccessful={this.props.submitSuccessful} submitFailed={this.props.submitFailed}/>
+                <Contact submitSuccessful={this.props.submitSuccessful} submitFailed={this.props.submitFailed}/>
                 <Locations locations={this.state.locations}/>
             </main>
         );

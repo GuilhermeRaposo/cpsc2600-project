@@ -297,3 +297,16 @@ footer {
 #services #year {
     width: 100px;
 }
+
+#submitSucess, #submitFailed {
+    height: 65px;
+    width: 200px;
+    color: white;
+    text-align: center;
+    font-size: 1.7em;
+    padding-top: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.89);
+    position: fixed;
+    left: 45%;
+}

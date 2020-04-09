@@ -22,7 +22,6 @@ exports.postAppointment = (req, res, next) => {
             type: req.body.type
         });
         
-        console.log(newAppointment)
         newAppointment.save()
         .then(results => {
             res.status(201).send(results);

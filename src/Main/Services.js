@@ -66,8 +66,13 @@ export default class Services extends React.Component {
             location: document.getElementById('locationSelect').value,
             type: document.getElementById('typeOfService').value
           })
-          .then(results => {})
-          .catch(error=>console.log(error))
+          .then(results => {
+              this.props.submitSuccessful();
+          })
+          .catch(error=>{
+              this.props.submitFailed();
+              console.log(error)
+            })
     }
 
     render() {
