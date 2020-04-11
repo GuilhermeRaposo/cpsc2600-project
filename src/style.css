@@ -185,6 +185,7 @@ main p {
     float: left;
     width: 650px;
     margin: 15px;
+    margin-top: 100px;
 }
 
 #contact-form {

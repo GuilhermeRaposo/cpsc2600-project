@@ -28,17 +28,17 @@ export default class Footer extends React.Component {
             <div id='contact'>
                 <div id="contact-inner">
                     <div id="contact-text">
-                    <h3>TEXT HERE?</h3>
+                    <h3>WE ARE READY TO HELP</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores vel natus magni beatae. Maxime, officia quibusdam quae dignissimos exercitationem beatae doloribus ut totam enim amet molestiae deleniti aliquid quisquam.
+                        You can leave us a message using the form on the right. 
+                        We have a great team that usually respond in less than an hour. 
+                        Alternatively you can directly send us an email at contact@gygabite.com,
+                        or contact us on our social media profiles.
                     </p>
-                    <h3>TEXT HERE?</h3>
+                    <h3>FOLLOW US ON SOCIAL MEDIA</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores vel natus magni beatae. Maxime, officia quibusdam quae dignissimos exercitationem beatae doloribus ut totam enim amet molestiae deleniti aliquid quisquam.
-                    </p>
-                    <h3>TEXT HERE?</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores vel natus magni beatae. Maxime, officia quibusdam quae dignissimos exercitationem beatae doloribus ut totam enim amet molestiae deleniti aliquid quisquam.
+                        You can follow us on Facebook, Twitter or Instagram to get the latest updates
+                        on our store, such as seasonal sales, new items, new locations and the hiring events that we often do.
                     </p>
                     </div>
 
